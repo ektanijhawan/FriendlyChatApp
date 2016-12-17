@@ -296,9 +296,7 @@ public class MainActivity extends AppCompatActivity {
     {
         long cacheExpiration=3600;
         if(mFirebaseRemoteConfig.getInfo().getConfigSettings().isDeveloperModeEnabled())
-        {
-            cacheExpiration=0;
-        }
+        { cacheExpiration=0;}
         mFirebaseRemoteConfig.fetch(cacheExpiration)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
